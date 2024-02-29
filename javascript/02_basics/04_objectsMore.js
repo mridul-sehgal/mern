@@ -69,7 +69,7 @@ const course={
 }
 
 // destructing.....
-const{ price,courseName,courseInstructor}=course // sequence does not matter
+const{ price,courseName,courseInstructor}=course // sequence does not matter name of variable in map matters
 
 console.log(price);
 console.log(courseName);
