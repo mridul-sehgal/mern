@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Mridul Sehgal</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    // SetTimeout:- This function performs a task after a particular time has passed.
+
+    // first way is to define function in the setTimeOut
+    setTimeout(() => { console.log("mridul"); }, 2000)
+
+    // second way is to pass refernce of a function 
+    const sayName = function () {
+        console.log("Say my Name");
+    }
+    setTimeout(sayName, 4000);
+
+    const changeH1 = setTimeout(() => {
+        document.querySelector('h1').innerHTML = "A web developer";
+    }, 5000)
+
+    // to stop setTimeOut
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearTimeout(changeH1); // clearTimeout function is used which needs a reference for the timeout that has to be stopped
+        console.log("Stopped changing of H1");
+    })
+
+
+    
+    // SetInterval:- This function continuosly performs a task after a certain interval of time
+
+    // first way is to define function in the setInterval
+    setInterval(() => { console.log("I want GPU", Date.now()); }, 2000)
+
+    // second way is to pass refernce of a function
+
+    const sayDate = function (str) {
+        console.log(str, Date.now())
+    }
+
+    setInterval(sayDate, 1000, "hello");
+
+</script>
+
+</html>

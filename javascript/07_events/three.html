@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Mridul Sehgal</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+
+    let printSet;
+
+    const print = function () {
+        printSet = setInterval(() => {
+            console.log(Date.now())
+        }, 1000)
+    }
+
+    document.querySelector('#start').addEventListener('click', print);
+
+    const stop = function () {
+        clearInterval(printSet)
+        console.log("printing stopped")
+    }
+
+    document.querySelector('#stop').addEventListener('click', stop);
+
+</script>
+
+</html>
