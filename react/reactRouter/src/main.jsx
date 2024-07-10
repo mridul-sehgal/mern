@@ -9,23 +9,6 @@ import User from './components/user/User'
 import Github from './components/github/Github'
 import { githubInfoLoader } from './components/githubInfoLoader'
 
-// const router=createBrowserRouter([
-//   {
-//     path: '/',
-//     element:<App/>,
-//     children:[
-//       {
-//         path:"",
-//         element:<Home/>
-//       },
-//       {
-//         path:"about",
-//         element:<About/>
-//       }
-//     ]
-//   }
-// ])
-
 
 const router=createBrowserRouter(
   createRoutesFromElements(
